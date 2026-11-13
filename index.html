@@ -375,7 +375,7 @@ input[type="range"] { width: 100%; accent-color: var(--accent); }
   function headerTop(hm, P) { return hm.story ? P + 70 : hm.sm ? 52 : P; }
   function drawHeader(hm, x, y, align, color) {
     var dim = color === '#ffffff' ? 'rgba(255,255,255,.84)' : 'rgba(16,17,20,.78)';
-    if (hm.mw) c.drawImage(markFor(color), align === 'center' ? x - hm.mw / 2 : x, y, hm.mw, hm.mh);
+    if (hm.mw) c.drawImage(markFor(color), (canvas.width - hm.mw) / 2, y, hm.mw, hm.mh);
     var ty = y + hm.mh + hm.g1;
     c.fillStyle = color; c.font = '900 ' + hm.size + 'px ' + DISPLAY;
     c.textAlign = align; c.textBaseline = 'alphabetic';
